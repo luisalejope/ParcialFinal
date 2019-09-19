@@ -1,0 +1,10 @@
+<html>
+<head>
+</head>
+<body>
+	<form action="index.jsp" method="GET">
+		uno es:<input type="text" name="uno">
+		<input type="submit" value="ok">
+	</form>
+</body>
+</html>
