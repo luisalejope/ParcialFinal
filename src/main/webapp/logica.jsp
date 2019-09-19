@@ -1,10 +1,10 @@
 <html>
 <body>
-<h2>Hello Heroku!</h2>
+<h2>JSP (Java Server Page)</h2>
 
 <%
-String dato = request.getParameter("uno");
-out.print (" la respuesta es de " + dato);
+String dato = request.getParameter("usuario");
+out.print ("El usuario que se ingreso es "  + dato);
 	
 %>
 </body>
