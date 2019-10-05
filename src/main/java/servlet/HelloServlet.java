@@ -21,7 +21,7 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
-        out.write("hello heroku jefe astro crack".getBytes());
+        out.write("hello heroku".getBytes());
         out.flush();
         out.close();
     }
