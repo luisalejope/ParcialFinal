@@ -5,19 +5,26 @@
  */
 package Adapter;
 
+import Facade.Cita;
+
 /**
  *
  * @author luisalejandropena
  */
-public class Conductor extends Usuario{
+public class Medico extends Usuario{
 
-    private String tipo="conductor";
-     public Conductor(String login, String password) {
+    private String tipo="Medico";
+    private String Nombre;
+    
+    
+    private Cita[] C;
+            
+     public Medico(String login, String password) {
         super(login, password);
-
+        this.C=new Cita[18];
     }
-
-    public Conductor() {
+    
+    public Medico() {
     }
 
     @Override
@@ -29,6 +36,26 @@ public class Conductor extends Usuario{
     public String GetTipousuario() {
         return tipo;
     }
+
+    public Cita[] getC() {
+        return C;
+    }
+
+    public void setC(Cita[] C) {
+        this.C = C;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    
+
+    
     
     
     

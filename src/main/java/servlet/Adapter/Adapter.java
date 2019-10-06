@@ -26,7 +26,7 @@ public class Adapter extends Usuario{
     public String GetTipousuario() {
                 String a;
                 
-                a="administrador";
+                a="Administrador";
                 return a;
     }
 

@@ -9,14 +9,14 @@ package Adapter;
  *
  * @author luisalejandropena
  */
-public class Pasajero extends Usuario{
-private String tipo ="pasajero";
-    public Pasajero(String login, String password){
+public class Paciente extends Usuario{
+private String tipo ="Paciente";
+    public Paciente(String login, String password){
     super(login, password);
    
     }
 
-    public Pasajero() {
+    public Paciente() {
     }
     
     @Override
