@@ -16,7 +16,7 @@ import javax.servlet.RequestDispatcher;
 
 @WebServlet(
         name = "Register",
-        urlPatterns = {"/registerA","/registerM","/registerP"}
+        urlPatterns = {"/registerA", "/registerM", "/registerP"}
 )
 
 public class Register extends HttpServlet {
@@ -28,37 +28,41 @@ public class Register extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        
-        String url =req.getServletPath();
-        if(url.equalsIgnoreCase("registerA")){
-            
+
+        String url = req.getServletPath();
+        if (url.equalsIgnoreCase("/registerM")) {
+
             String User = req.getParameter("user");
-            String Pass= req.getParameter("pass");
-            String Cedula= req.getParameter("cedula");
-            String Nombres= req.getParameter("nombres");
-            String Fecha= req.getParameter("fecha");
-            String Direccion= req.getParameter("direccion");
-            String Telefono= req.getParameter("telefono");
-            Usuario usuario=facade.addMedico(User, Pass, Cedula, Nombres, Fecha, Direccion, Telefono);
-            
-        }else if(url.equalsIgnoreCase("registerM")){
+            String Pass = req.getParameter("pass");
+            String Cedula = req.getParameter("cedula");
+            String Nombres = req.getParameter("nombres");
+            String Fecha = req.getParameter("fecha");
+            String Direccion = req.getParameter("direccion");
+            String Telefono = req.getParameter("telefono");
+            Usuario usuario = facade.addMedico(User, Pass, Cedula, Nombres, Fecha, Direccion, Telefono);
+            if (usuario != null) {
+                rd = req.getRequestDispatcher("/index.html");
+
+            }
+
+        } else if (url.equalsIgnoreCase("/registerP")) {
             String User = req.getParameter("user");
-            String Pass= req.getParameter("pass");
-            String Cedula= req.getParameter("cedula");
-            String Nombres= req.getParameter("nombres");
-            String Fecha= req.getParameter("fecha");
-            String Direccion= req.getParameter("direccion");
-            String Telefono= req.getParameter("telefono");
-            Usuario usuario=facade.addPaciente(User, Pass, Cedula, Nombres, Fecha, Direccion, Telefono);
-            
-        }else if(url.equalsIgnoreCase("registerP")){
+            String Pass = req.getParameter("pass");
+            String Cedula = req.getParameter("cedula");
+            String Nombres = req.getParameter("nombres");
+            String Fecha = req.getParameter("fecha");
+            String Direccion = req.getParameter("direccion");
+            String Telefono = req.getParameter("telefono");
+            Usuario usuario = facade.addPaciente(User, Pass, Cedula, Nombres, Fecha, Direccion, Telefono);
+
+        } else if (url.equalsIgnoreCase("/registerA")) {
             String User = req.getParameter("user");
-            String Pass= req.getParameter("pass");
-            String Cedula= req.getParameter("cedula");
-            String Nombres= req.getParameter("nombres");
-            String Fecha= req.getParameter("fecha");
-            String Direccion= req.getParameter("direccion");
-            String Telefono= req.getParameter("telefono");
+            String Pass = req.getParameter("pass");
+            String Cedula = req.getParameter("cedula");
+            String Nombres = req.getParameter("nombres");
+            String Fecha = req.getParameter("fecha");
+            String Direccion = req.getParameter("direccion");
+            String Telefono = req.getParameter("telefono");
         }
     }
 

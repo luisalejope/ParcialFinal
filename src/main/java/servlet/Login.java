@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 
 @WebServlet(
-        name = "MyServlet",
-        urlPatterns = {"/hello"}
+        name = "Login",
+        urlPatterns = {"/login"}
 )
 
 public class Login extends HttpServlet {
@@ -28,8 +28,8 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        String user = req.getParameter("usuario");
-        String pass = req.getParameter("password");
+        String user = req.getParameter("user");
+        String pass = req.getParameter("pass");
         Usuario usuario = facade.login(user, pass);
         if (usuario != null) {
             if (usuario.getTipouser().equals("Administrador")) {
@@ -38,7 +38,7 @@ public class Login extends HttpServlet {
                 rd.forward(req, resp);
             } else if (usuario.getTipouser().equals("Medico")) {
                 req.setAttribute("usuario", user);
-                rd = req.getRequestDispatcher("/newhtml.html");
+                rd = req.getRequestDispatcher("/homeMedico.html");
                 rd.forward(req, resp);
 
             } else if (usuario.getTipouser().equals("Paciente")) {
