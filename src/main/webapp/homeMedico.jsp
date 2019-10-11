@@ -30,7 +30,7 @@
                         aria-expanded="false">Opiones<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="nav-item">
-                            <a href="medico?medico=${user.login}.html">Agregar disponibilidad</a>
+                            <a href="medico?medico=${user.login}">Agregar disponibilidad</a>
                         </li>
                         
                     </ul>
