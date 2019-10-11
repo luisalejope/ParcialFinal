@@ -31,10 +31,7 @@
                         <li class="nav-item active">
                             <a href="RegistroPaciente.html">Agregar disponibilidad</a>
                         </li>
-                        <li role="separator" class="divider"></li>
-                        <li class="nav-item">
-                            <a href="RegistroMedico.html">Ver Citas</a>
-                        </li>
+                        
                     </ul>
                 </li>
             </ul>

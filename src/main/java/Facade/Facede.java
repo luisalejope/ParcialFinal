@@ -34,10 +34,10 @@ public class Facede {
         this.usuarios = new HashMap<>();
         this.eps1 = new EPS();
         this.keyMedicos = new ArrayList<>();
-        this.addMedico("nikolas", "123", "34567", "Nikolas", "21", "armenia", "23456789");
-        this.addPaciente("nikolasp", "123", "34567", "Nikolas", "21", "armenia", "23456789");
-        this.addAdministrador("nikolasa", "123", "34567", "Nikolas", "21", "armenia", "23456789");
-        Medico med = (Medico) this.usuarios.get("nikolas");
+        this.addMedico("garcia", "123", "34567", "Garcia", "21", "armenia", "23456789");
+        this.addPaciente("julian", "123", "34567", "Julian", "21", "armenia", "23456789");
+        this.addAdministrador("garzon", "123", "34567", "Garzon", "21", "armenia", "23456789");
+        Medico med = (Medico) this.usuarios.get("garcia");
         this.AgregarAgenda(med.getLogin(), "12/10/2019", "06:00", "09:00", "06:00", "09:00");
 
     }
@@ -101,9 +101,9 @@ public class Facede {
         Medico medi = (Medico) this.usuarios.get(medic);
         if (medi.addDisponibilidad(fecha, LocalTime.parse(horaInicioM), LocalTime.parse(horaFinM), LocalTime.parse(horaInicioT), LocalTime.parse(horaFinT))) {
             this.usuarios.replace(medi.getLogin(), medi);
-            return "Disponibilidad Añadida";
+            return "Disponibilidad Aï¿½adida";
         }
-        return "Error añadiendo cita";
+        return "Error aï¿½adiendo cita";
     }
 
     public HashMap<String, Usuario> getUsuarios() {

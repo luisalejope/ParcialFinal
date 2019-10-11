@@ -32,10 +32,7 @@
                         <li class="nav-item">
                             <a href="medico?medico=${user.login}.html">Agregar disponibilidad</a>
                         </li>
-                        <li role="separator" class="divider"></li>
-                        <li class="nav-item">
-                            <a href="VerCitasMedico.html">Ver Citas</a>
-                        </li>
+                        
                     </ul>
                 </li>
             </ul>
