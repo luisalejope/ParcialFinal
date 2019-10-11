@@ -49,6 +49,7 @@
                     <form action="agendar" method="GET">
                         <input type="text" class="campos" name="fecha" placeholder="DD:MM:AA" required="required"
                             maxlength="20" />
+                        <br>
                         <a>Franja1</a>
                         <br>
                         <input type="text" class="campos" name="horaI" placeholder="HH:MM" required="required"
