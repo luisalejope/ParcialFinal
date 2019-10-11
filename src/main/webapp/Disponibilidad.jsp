@@ -47,6 +47,7 @@
                     
                     <h3>Agregue sus horas por franja</h3>
                     <form action="agendar" method="GET">
+                        <input type="hidden" name="medico" value="${medico.login}"/>
                         <input type="text" class="campos" name="fecha" placeholder="DD:MM:AA" required="required"
                             maxlength="20" />
                         <br>

@@ -30,13 +30,13 @@ public class Medico extends HttpServlet {
 
         String url = req.getServletPath();
         if (url.equalsIgnoreCase("/agendar")) {
-            String medico = (String) req.getAttribute("medico");
+            String medico = req.getParameter("medico");
             String fecha = req.getParameter("fecha");
             String hI1 = req.getParameter("horaI");
             String hF1 = req.getParameter("horaF");
             String hI2 = req.getParameter("horaI2");
             String hF2 = req.getParameter("horaF2");
-            facade.AgregarAgenda("nikolas", fecha, hI1, hF1, hI2, hF2);
+            facade.AgregarAgenda(medico, fecha, hI1, hF1, hI2, hF2);
             
         } 
         else if(url.equalsIgnoreCase("/medico")){
