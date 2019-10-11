@@ -47,17 +47,8 @@
                     Disponibilidad:
                 </h1>
                 <div id="formUsuario">
-                    <h3>Agregue sus dias de trabajo</h3>
-                    <form action = "Registroe" method="post">
-                        <input type="checkbox" value=""> Lunes
-                        <input type="checkbox" value=""> Martes
-                        <input type="checkbox" value=""> Miercoles
-                        <input type="checkbox" value=""> Jueves
-                        <input type="checkbox" value=""> Viernes
-                        <input type="checkbox" value=""> Sabado
-                        <input type="checkbox" value=""> Domingo
-                    </form>
-                    <h3>Agregue sus horas por dia</h3>
+                    
+                    <h3>Agregue sus horas por franja</h3>
                     <form action="agendar" method="GET">
                         <input type="text" class="campos" name="fecha" placeholder="DD:MM:AA" required="required"
                             maxlength="20" />
