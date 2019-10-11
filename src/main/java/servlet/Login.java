@@ -33,11 +33,11 @@ public class Login extends HttpServlet {
         Usuario usuario = facade.login(user, pass);
         if (usuario != null) {
             if (usuario.getTipouser().equals("Administrador")) {
-                req.setAttribute("usuario", user);
+                req.setAttribute("usuario", usuario);
                 rd = req.getRequestDispatcher("/HomeAdmin.html");
                 rd.forward(req, resp);
             } else if (usuario.getTipouser().equals("Medico")) {
-                req.setAttribute("usuario", user);
+                req.setAttribute("usuario", usuario);
                 rd = req.getRequestDispatcher("/homeMedico.jsp");
                 rd.forward(req, resp);
 
