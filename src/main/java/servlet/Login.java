@@ -34,16 +34,16 @@ public class Login extends HttpServlet {
         if (usuario != null) {
             if (usuario.getTipouser().equals("Administrador")) {
                 req.setAttribute("usuario", user);
-                rd = req.getRequestDispatcher("/newhtml1.html");
+                rd = req.getRequestDispatcher("/HomeAdmin.html");
                 rd.forward(req, resp);
             } else if (usuario.getTipouser().equals("Medico")) {
                 req.setAttribute("usuario", user);
-                rd = req.getRequestDispatcher("/homeMedico.html");
+                rd = req.getRequestDispatcher("/homeMedico.jsp");
                 rd.forward(req, resp);
 
             } else if (usuario.getTipouser().equals("Paciente")) {
-                req.setAttribute("usuario", user);
-                rd = req.getRequestDispatcher("/newhtml2.html");
+                req.setAttribute("usuario", usuario);
+                rd = req.getRequestDispatcher("/HomePaciente.jsp");
                 rd.forward(req, resp);
             }
         }

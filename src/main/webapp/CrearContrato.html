@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Paciente</title>
+    <title>Admin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Css/background.css">
@@ -20,19 +20,16 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="nav-item active">
-                    <a href="HomePaciente.html">Home Paciente</a>
+                    <a href="index.html">Home Admin</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">Opiones<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="nav-item">
-                            <a href="PedirCita.html">Pedir cita</a>
+                            <a href="Disponibilidad.html">Agregar Contrato</a>
                         </li>
-                        <li role="separator" class="divider"></li>
-                        <li class="nav-item">
-                            <a href="VerCitasPaciente.html">Ver Citas</a>
-                        </li>
+                       
                     </ul>
                 </li>
             </ul>
@@ -42,21 +39,38 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 style="color: black;">
-                    Registro Medico:
+                    Contrato:
                 </h1>
                 <div id="formUsuario">
-                    <h3>Ingrese la fecha y hora para ver disponibilidad</h3>
-                    <form action="verDisponibilidad" method="GET">
-                        <input type="text" class="campos" name="fecha" placeholder="Fecha" required="required"
-                            maxlength="7" />
+                    <h3>Ingrese datos</h3>
+                    <form action="contrato" method="GET">
+                        <input type="text" class="campos" name="id" placeholder="Id contrato" required="required"
+                            maxlength="20" />
                         <br>
-                        <input type="text" class="campos" name="hora" placeholder="Hora" required="required"
-                            maxlength="7" />
-                        <br></br><input type="submit" class="btn btn-success" value="Buscar" />
+                        <input type="text" class="campos" name="login" placeholder="Nombre de Cotizante" required="required"
+                            maxlength="20" />
+                        <br>
+                        <br>
+                        <input type="text" class="campos" name="documento" placeholder="Documento" required="required"
+                            maxlength="20" />
+                        <br>
+                        <br>
+                        <input type="text" class="campos" name="fecha" placeholder="fecha de nacimiento" required="required"
+                            maxlength="20" />
+                        <br>
+                         <br>
+                        <input type="text" class="campos" name="genero" placeholder="Genero" required="required"
+                            maxlength="20" />
+                        <br>
+
+
+                        <br></br><input type="submit" class="btn btn-success" value="Crear" />
                     </form>
                 </div>
+
             </div>
         </div>
+    </div>
 </body>
 
 </html>

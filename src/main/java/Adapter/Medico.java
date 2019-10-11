@@ -73,6 +73,7 @@ public class Medico extends Usuario {
     }
 
     public String addCita(String fecha, LocalTime hora, String paciente) {
+        System.out.println(horario.get(fecha));    
         this.horario.get(fecha).put(hora, paciente);
         return "Cita aniadida correctamente al medico";
     }

@@ -1,3 +1,6 @@
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +30,7 @@
                         aria-expanded="false">Opiones<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="nav-item">
-                            <a href="Disponibilidad.html">Agregar disponibilidad</a>
+                            <a href="medico?medico=${user.login}.html">Agregar disponibilidad</a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li class="nav-item">
