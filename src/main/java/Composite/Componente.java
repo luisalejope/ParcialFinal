@@ -4,15 +4,8 @@
  * and open the template in the editor.
  */
 package Composite;
-//interfaz
 
-/**
- *
- * @author luisalejandropena
- */
 public interface Componente {
-
-    public String mostrar2(String codigo);
-
-    public String mostrar();
+    public String mostrar(String codigo);
+     public String mostrarDatos();
 }
