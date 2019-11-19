@@ -51,7 +51,7 @@ public class Medico extends Usuario {
     }
 
     public String getDisponibilidad(String fecha) {
-        String disponibilidad = "\nHoras en las que el medico " + this.getLogin() + " se encuentra disponible el di­a " + fecha + "\n";
+        String disponibilidad = "\nHoras en las que el medico " + this.getLogin() + " se encuentra disponible el diï¿½a " + fecha + "\n";
         boolean cupo = false;
 
         if (this.horario.containsKey(fecha)) {
@@ -62,7 +62,7 @@ public class Medico extends Usuario {
                 }
             }
         } else {
-            return "No hay agenda programada para ese di­a";
+            return "No hay agenda programada para ese diï¿½a";
         }
 
         return (cupo) ? disponibilidad : "Ninguna";
@@ -79,7 +79,7 @@ public class Medico extends Usuario {
     }
 
     public String getCitas(String fecha) {
-        String disponibilidad = "Citas del medico " + this.getLogin() + " para el di­a " + fecha + "\n";
+        String disponibilidad = "Citas del medico " + this.getLogin() + " para el diï¿½a " + fecha + "\n";
         boolean agenda = false;
 
         if (this.horario.containsKey(fecha)) {
@@ -90,10 +90,10 @@ public class Medico extends Usuario {
                 }
             }
         } else {
-            return "No hay agenda programada para ese di­a";
+            return "No hay agenda programada para ese diï¿½a";
         }
 
-        return (agenda) ? disponibilidad : "No hay citas para ese di­a";
+        return (agenda) ? disponibilidad : "No hay citas para ese diï¿½a";
     }
 
 }
