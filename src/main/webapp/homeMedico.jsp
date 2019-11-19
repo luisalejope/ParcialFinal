@@ -23,29 +23,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="navbar-header">
-
-                <a class="navbar-brand" href="index.html">Eps chingona</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a href="index.html">Home Medico</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                        aria-expanded="false">Opiones<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item">
-                            <a href="medico?medico=${usuario.login}">Agregar disponibilidad</a>
-                        </li>
-
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    
 
     <!--Navbar-->
     <nav>
@@ -55,7 +33,7 @@
                 <ul class="left hide-on-med-and-down">
                     <li><a href="sass.html">Historial Consultas</a></li>
                     <li><a href="badges.html">Historial Clínico</a></li>
-                    <li><a href="collapsible.html">Agregar Disponibilidad</a></li>
+                    <li><a href="medico?medico=${usuario.login}">Agregar Disponibilidad</a></li>
                 </ul>
             </div>
         </nav>
@@ -63,7 +41,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><a href="sass.html">Historial Consultas</a></li>
             <li><a href="badges.html">Historial Clínico</a></li>
-            <li><a href="collapsible.html">Agregar Disponibilidad</a></li>
+            <li><a href="medico?medico=${usuario.login}">Agregar Disponibilidad</a></li>
         </ul>
         <!--JavaScript at end of body for optimized loading-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
