@@ -69,7 +69,7 @@ public class Medico extends HttpServlet {
             } catch (ParseException ex) {
                 Logger.getLogger(Medico.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
+            //a
             
         }
     }
