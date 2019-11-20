@@ -11,12 +11,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 
 @WebServlet(
         name = "Medico",
-        urlPatterns = {"/agendar","/medico"}
+        urlPatterns = {"/agendar", "/medico"}
 )
 
 public class Medico extends HttpServlet {
@@ -37,14 +42,26 @@ public class Medico extends HttpServlet {
             String hI2 = req.getParameter("horaI2");
             String hF2 = req.getParameter("horaF2");
             facade.AgregarAgenda(medico, fecha, hI1, hF1, hI2, hF2);
-            
-        } 
-        else if(url.equalsIgnoreCase("/medico")){
+
+        } else if (url.equalsIgnoreCase("/medico")) {
             String medico = req.getParameter("medico");
-             req.setAttribute("medico", medico);
-                rd = req.getRequestDispatcher("/Disponibilidad.jsp");
-                rd.forward(req, resp);
-        
+            req.setAttribute("medico", medico);
+            rd = req.getRequestDispatcher("/Disponibilidad.jsp");
+            rd.forward(req, resp);
+
+        } else if (url.equalsIgnoreCase("/historiaPaciente")) {
+            String paciente = req.getParameter("paciente");
+            String Especialista = req.getParameter("especialista");
+            String Antecedentes_Familiares = req.getParameter("antecedentes");
+            String Diagnostico = req.getParameter("diagnostico");
+            String otros = req.getParameter("otros");
+            try {
+                Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(req.getParameter("fecha"));
+            } catch (ParseException ex) {
+                Logger.getLogger(Medico.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            Medico medico =(Medico) req.getAttribute("medico");
+            
         }
     }
 
