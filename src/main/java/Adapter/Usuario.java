@@ -97,5 +97,10 @@ public abstract class Usuario {
         this.Telefono=Telefono;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" + "Cedula=" + Cedula + ", Nombres=" + Nombres + ", Telefono=" + Telefono + ", tipouser=" + tipouser + '}';
+    }
+
     
 }
