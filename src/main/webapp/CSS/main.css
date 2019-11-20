@@ -3,3 +3,13 @@ body{
     font-family: 'roboto';
     text-align: center;
 }
+input[type=submit] {
+    font-family: 'roboto';
+    padding:5px 15px; 
+    background:#ffffff00; 
+    border:0 none;
+    color: white;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
