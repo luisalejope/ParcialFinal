@@ -40,17 +40,16 @@
      <div class="container">
         <div class="row">
             <div class="col s12">
-                <h1 style="color: black;">
+                <h3 style="color: black;">
                     Contratos:
-                </h1>
+                </h3>
                 <div id="formUsuario">
-                    <h3>Ingrese datos</h3>
+                    <h5>Ingrese datos</h5>
                     <form action="contratocodigo" method="GET">
-                        <div class="col s12">
-                        <input type="text" class="campos" name="id" placeholder="Id contrato" required="required" maxlength="20" style="width: 50%;"/>
+                        <div class="input-field col s12">
+                        <input type="text" class="campos" name="id" required="required" maxlength="20"/>
+                        <label for="id">Id Contrato</label>
                         </div>
-                        <br>
-                        <br>
                         <input type="submit" class="btn btn-success" value="Buscar" />
                     </form>
                 </div>
