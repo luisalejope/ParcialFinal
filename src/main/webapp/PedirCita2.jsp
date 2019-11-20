@@ -1,45 +1,45 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
-        <title>Paciente</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="Css/background.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <meta charset="UTF-8" />
+            <!-- Compiled and minified CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <!--Import Google Icon Font-->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <!--Import Google Roboto Font-->
+            <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+            <!--Import materialize.css-->
+            <link type="text/css" rel="stylesheet" href="CSS/materialize.min.css" media="screen,projection" />
+            <!--Let browser know website is optimized for mobile-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <!--Import main.css-->
+            <link type="text/css" rel="stylesheet" href="CSS/main.css">
+            <!--Title-->
+            <title>Pedir Cita</title>
     </head>
 
     <body>
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <div class="navbar-header">
-
-                    <a class="navbar-brand" href="index.html">Eps chingona</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="nav-item active">
-                        <a href="HomePaciente.html">Home Paciente</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Opiones<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="PedirCita.html">Pedir cita</a>
-                            </li>
-                            <li role="separator" class="divider"></li>
-                            <li class="nav-item">
-                                <a href="VerCitasPaciente.html">Ver Citas</a>
-                            </li>
-                        </ul>
-                    </li>
+        <!--Navbar-->
+    <nav>
+            <div class="nav-wrapper blue darken-2">
+                <a href="HomePaciente.jsp" class="brand-logo right">Home Paciente</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="paciente?paciente=${usuario.login}">Pedir Cita</a></li>
+                    <li><a href="badges.html">Ver Historial Médico</a></li>
+                    <li><a href="historialcitaspa.html">Historial Citas</a></li>
+                    <li><a href="VerCitasPaciente.html">Ver Citas</a></li>
                 </ul>
             </div>
         </nav>
+    
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="paciente?paciente=${usuario.login}">Pedir Cita</a></li>
+            <li><a href="badges.html">Ver Historial Médico</a></li>
+            <li><a href="historialcitaspa.html">Historial Citas</a></li>
+            <li><a href="VerCitasPaciente.html">Ver Citas</a></li>
+        </ul>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -54,7 +54,7 @@
                             <input type="text" class="campos" name="hora" placeholder="hora" value="${hora}" required="required"
                                    maxlength="7" />
                             <br>
-                            <br></br><input type="submit" class="btn btn-success" value="Buscar" />
+                            <br></br><input type="submit" class="btn btn-success" value="Buscar" style="background-color: #26a69a;" />
                         </form>
                     </div>
                 </div>
@@ -93,6 +93,10 @@
                 </div>
             </div>
         </div>
+            <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     </body>
 
 </html>
