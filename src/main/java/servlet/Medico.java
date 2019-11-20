@@ -22,7 +22,7 @@ import javax.servlet.ServletOutputStream;
 
 @WebServlet(
         name = "Medico",
-        urlPatterns = {"/agendar", "/medico"}
+        urlPatterns = {"/agendar", "/medico","/historiaPaciente"}
 )
 
 public class Medico extends HttpServlet {
