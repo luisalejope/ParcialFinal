@@ -32,7 +32,7 @@
             <ul class="left hide-on-med-and-down">
                 <li><a href="sass.html">Historial Consultas</a></li>
                 <li><a href="historialcitasme.html">Historial Citas</a></li>
-                <li><a href="badges.html">Historial Clínico</a></li>
+                <li><a href="crearhc.html">Historial Clínico</a></li>
                 <li><a href="medico?medico=${usuario.login}">Agregar Disponibilidad</a></li>
                 <li><a href="historiaclinica.html">Historia Clínica</a></li>
 
