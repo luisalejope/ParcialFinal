@@ -63,8 +63,10 @@ public class Medico extends HttpServlet {
             Adapter.Medico medico =(Adapter.Medico) req.getAttribute("medico");
 
             facade.agregarHistoria(paciente, Especialista, Antecedentes_Familiares, Diagnostico, otros, Fecha, medico);
-             rd = req.getRequestDispatcher("/Disponibilidad.jsp");
-            rd.forward(req, resp);
+            ServletOutputStream out = resp.getOutputStream();
+            out.write("Historial Agregado".getBytes());
+            out.flush();
+            out.close();
             } catch (ParseException ex) {
                 Logger.getLogger(Medico.class.getName()).log(Level.SEVERE, null, ex);
                  ServletOutputStream out = resp.getOutputStream();
@@ -78,7 +80,10 @@ public class Medico extends HttpServlet {
         else if (url.equalsIgnoreCase("/historiaNombre")){
             String nombre = req.getParameter("nombre");
           ArrayList<Historia_Clinica>h =  facade.TraerPorNombre(nombre);
-          h.get(0).getDiagnostico();
+          ServletOutputStream out = resp.getOutputStream();
+           out.write(h.toString().getBytes());
+            out.flush();
+            out.close();
           
             
          
