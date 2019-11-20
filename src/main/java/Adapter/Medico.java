@@ -6,6 +6,7 @@
 package Adapter;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -94,6 +95,12 @@ public class Medico extends Usuario {
         }
 
         return (agenda) ? disponibilidad : "No hay citas para ese di�a";
+    }
+    
+    public ArrayList<Historia_Clinica>TraerPorNombre(Adapter.Paciente P){
+        
+     return  P.getHistorial();
+    
     }
 
 }

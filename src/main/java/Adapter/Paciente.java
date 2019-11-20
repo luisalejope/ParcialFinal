@@ -101,4 +101,21 @@ public class Paciente extends Usuario{
         this.Historial.add(historia);
     
     }
+
+    public HashMap<String, HashMap<LocalTime, String>> getHorario() {
+        return horario;
+    }
+
+    public void setHorario(HashMap<String, HashMap<LocalTime, String>> horario) {
+        this.horario = horario;
+    }
+
+    public ArrayList<Historia_Clinica> getHistorial() {
+        return Historial;
+    }
+
+    public void setHistorial(ArrayList<Historia_Clinica> Historial) {
+        this.Historial = Historial;
+    }
+    
 }

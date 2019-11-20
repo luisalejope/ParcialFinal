@@ -53,7 +53,7 @@ public class Medico extends HttpServlet {
         } else if (url.equalsIgnoreCase("/historiaPaciente")) {
             
             try {
-                Date Fecha=new SimpleDateFormat("dd/MM/yyyy").parse(req.getParameter("fecha"));String paciente = req.getParameter("paciente");
+            Date Fecha=new SimpleDateFormat("dd/MM/yyyy").parse(req.getParameter("fecha"));String paciente = req.getParameter("paciente");
             String Especialista = req.getParameter("especialista");
             String Antecedentes_Familiares = req.getParameter("a_familiares");
             String Diagnostico = req.getParameter("diagnostico");

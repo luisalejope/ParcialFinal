@@ -129,4 +129,9 @@ public class Facede {
         this.usuarios.replace(paciente, pac);
         
     }
+    public ArrayList<Historia_Clinica> TraerPorNombre(String Nombre){
+      Paciente p = (Paciente)  this.usuarios.get(Nombre);
+      return p.getHistorial();
+    
+    }
 }
