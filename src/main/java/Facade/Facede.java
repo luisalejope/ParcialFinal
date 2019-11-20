@@ -7,12 +7,14 @@ package Facade;
 
 import Composite.EPS;
 import Adapter.Adaptador;
+import Adapter.Historia_Clinica;
 import Adapter.Medico;
 import Adapter.Paciente;
 import Adapter.Usuario;
 import Composite.Componente;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Facede {
@@ -118,5 +120,13 @@ public class Facede {
         eps1.addCont(c);
 
     }
-
+    public ArrayList<Historia_Clinica>HistorialPorPaciente(Date Inicio, Date Fin,Paciente P){
+       return P.Buscar_Citas(Inicio, Fin);
+    }
+    public void agregarHistoria(String paciente, String Especialista,String Antecedentes_Familiares,String Diagnostico,String otros,Date Fecha,Medico medico){
+        Paciente pac = (Paciente)this.usuarios.get(paciente);
+        pac.CrearHistoria(Especialista, Antecedentes_Familiares, Diagnostico, otros, Fecha, medico);
+        this.usuarios.replace(paciente, pac);
+        
+    }
 }

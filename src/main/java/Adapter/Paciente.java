@@ -7,15 +7,19 @@ package Adapter;
 
 import Adapter.Usuario;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Paciente extends Usuario{
     private HashMap<String, HashMap<LocalTime, String>> horario;
+    private ArrayList<Historia_Clinica>Historial;
     
     public Paciente(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono){
     super(login, password, Cedula, Nombres, Fecha, Direccion, Telefono);
      this.horario = new HashMap<>();
      super.setTipouser("Paciente");
+     this.Historial = new ArrayList();
    
     }
     
@@ -66,5 +70,35 @@ public class Paciente extends Usuario{
 
         return (agenda)?disponibilidad:"Ninguna";
     }
+    public ArrayList<Historia_Clinica> Buscar_Citas(Date a, Date b){
+        ArrayList<Historia_Clinica>H = new ArrayList();
+        for (int i = 0; i < this.Historial.size(); i++) {
+            if(this.Historial.get(i).getFecha().equals(a)){
+                H.add(this.Historial.get(i));
+                for (int j = i; j < this.Historial.size(); j++) {
+                    do {
+                    H.add(this.Historial.get(j));
+                    }
+                    while(b.before(this.Historial.get(j).getFecha())||b.equals(this.Historial.get(j).getFecha()));
+                }
+                
+            
+            
+            }
+            
+        }
+        return H;
+    
+    }
+    public void CrearHistoria(String Especialista,String Antecedentes_Familiares,String Diagnostico,String otros,Date Fecha,Medico medico ){
+        Historia_Clinica historia = new Historia_Clinica();
+        historia.setAntecedentes_Familiares(Antecedentes_Familiares);
+        historia.setDiagnostico(Diagnostico);
+        historia.setEspecialista(Especialista);
+        historia.setFecha(Fecha);
+        historia.setMedico(medico);
+        historia.setOtros(otros);
+        this.Historial.add(historia);
+    
+    }
 }
-
