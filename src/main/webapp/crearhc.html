@@ -1,3 +1,5 @@
+<!--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +18,10 @@
     <!--Import main.css-->
     <link type="text/css" rel="stylesheet" href="CSS/main.css">
     <!--Title-->
-    <title>Historial Citas</title>
+    <title>Historia Clínica</title>
 </head>
 
 <body>
-
-
-    <!--Navbar-->
     <!--Navbar-->
     <nav>
         <div class="nav-wrapper blue darken-2">
@@ -34,8 +33,6 @@
                 <li><a href="badges.html">Historial Clínico</a></li>
                 <li><a href="medico?medico=${usuario.login}">Agregar Disponibilidad</a></li>
                 <li><a href="historiaclinica.html">Historia Clínica</a></li>
-
-
             </ul>
         </div>
     </nav>
@@ -46,35 +43,50 @@
         <li><a href="badges.html">Historial Clínico</a></li>
         <li><a href="medico?medico=${usuario.login}">Agregar Disponibilidad</a></li>
         <li><a href="historiaclinica.html">Historia Clínica</a></li>
+
     </ul>
 
     <div class="container">
         <div class="row">
             <div class="col s12">
-                <h3>Elige una fecha</h3>
-            </div>
-            <div class="input-field col s12 m6 l6">
-                <input type="text" class="datepicker" name="fechaini">
-                <label for="fechaini">Fecha de Inicio</label>
-            </div>
-            <div class="input-field col s12 m6 l6">
-                <input type="text" class="datepicker" name="fechafin">
-                <label for="fechafin">fecha de Finalizacion</label>
-            </div>
-            <div class="input-field col s12 m12 l12">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
+                <form action="/agregarhistoria">
+                    <div class="input-field col s12 m6">
+                        <input type="text" name="especialista">
+                        <label for="especialista">Especialista</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="text" name="a_familiares">
+                        <label for="a_familiares">Antecedentes Familiares</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="text" name="diagnostico">
+                        <label for="diagnostico">diagnostico</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="text" name="otros">
+                        <label for="otros">Otros</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="date" name="fecha" class="datepicker">
+                        <label for="fecha">Fecha</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input type="text" name="medico">
+                        <label for="medico">Medico</label>
+                    </div>
+                    <div class="input-field col s12 m12">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-
     </div>
 </body>
 
