@@ -1,5 +1,6 @@
 package servlet;
 
+import Adapter.Historia_Clinica;
 import Adapter.Usuario;
 import Facade.AdminCitas;
 import Facade.Facede;
@@ -22,7 +23,7 @@ import javax.servlet.ServletOutputStream;
 
 @WebServlet(
         name = "Medico",
-        urlPatterns = {"/agendar", "/medico","/historiaPaciente"}
+        urlPatterns = {"/agendar", "/medico","/historiaPaciente","/historiaNombre"}
 )
 
 public class Medico extends HttpServlet {
@@ -71,6 +72,17 @@ public class Medico extends HttpServlet {
             }
             //a
             
+        }
+        else if (url.equalsIgnoreCase("/historiaNombre")){
+            String nombre = req.getParameter("nombre");
+          ArrayList<Historia_Clinica>h =  facade.TraerPorNombre(nombre);
+          
+          h.get(0).getDiagnostico();
+          
+            
+          rd = req.getRequestDispatcher("/Disponibilidad.jsp");
+            rd.forward(req, resp);
+        
         }
     }
 
