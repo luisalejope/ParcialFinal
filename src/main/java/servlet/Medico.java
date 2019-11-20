@@ -54,7 +54,8 @@ public class Medico extends HttpServlet {
         } else if (url.equalsIgnoreCase("/historiaPaciente")) {
             
             try {
-            Date Fecha=new SimpleDateFormat("dd/MM/yyyy").parse(req.getParameter("fecha"));String paciente = req.getParameter("paciente");
+            Date Fecha=new SimpleDateFormat("dd/MM/yyyy").parse(req.getParameter("fecha"));
+            String paciente = req.getParameter("paciente");
             String Especialista = req.getParameter("especialista");
             String Antecedentes_Familiares = req.getParameter("a_familiares");
             String Diagnostico = req.getParameter("diagnostico");
@@ -62,13 +63,14 @@ public class Medico extends HttpServlet {
             Adapter.Medico medico =(Adapter.Medico) req.getAttribute("medico");
 
             facade.agregarHistoria(paciente, Especialista, Antecedentes_Familiares, Diagnostico, otros, Fecha, medico);
-            ServletOutputStream out = resp.getOutputStream();
-            out.write("Cita agregada".getBytes());
-            out.flush();
-            out.close();
-                
+             rd = req.getRequestDispatcher("/Disponibilidad.jsp");
+            rd.forward(req, resp);
             } catch (ParseException ex) {
                 Logger.getLogger(Medico.class.getName()).log(Level.SEVERE, null, ex);
+                 ServletOutputStream out = resp.getOutputStream();
+            out.write(ex.toString().getBytes());
+            out.flush();
+            out.close();
             }
             //a
             
@@ -76,12 +78,10 @@ public class Medico extends HttpServlet {
         else if (url.equalsIgnoreCase("/historiaNombre")){
             String nombre = req.getParameter("nombre");
           ArrayList<Historia_Clinica>h =  facade.TraerPorNombre(nombre);
-          
           h.get(0).getDiagnostico();
           
             
-          rd = req.getRequestDispatcher("/Disponibilidad.jsp");
-            rd.forward(req, resp);
+         
         
         }
     }
