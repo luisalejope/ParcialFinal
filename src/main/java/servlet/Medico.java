@@ -60,8 +60,9 @@ public class Medico extends HttpServlet {
             String Antecedentes_Familiares = req.getParameter("a_familiares");
             String Diagnostico = req.getParameter("diagnostico");
             String otros = req.getParameter("otros");
-            Adapter.Medico medico =(Adapter.Medico) req.getAttribute("medico");
+            
              String me = req.getParameter("medico");
+             Adapter.Medico medico = (Adapter.Medico)facade.getUsuarios().get(me);
 
          
                   
