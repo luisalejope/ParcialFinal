@@ -72,7 +72,7 @@ public class Historia_Clinica {
 
     @Override
     public String toString() {
-        return "Historia_Clinica{" + "Especialista=" + Especialista + ", Antecedentes_Familiares=" + Antecedentes_Familiares + ", Diagnostico=" + Diagnostico + ", otros=" + otros + ", Fecha=" + Fecha + ", medico=" + medico + '}';
+        return "Historia_Clinica{" + "Especialista=" + Especialista + ", Antecedentes_Familiares=" + Antecedentes_Familiares + ", Diagnostico=" + Diagnostico + ", otros=" + otros + ", Fecha=" + Fecha + ", medico=" + medico.toString() + '}';
     }
     
     
