@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Roboto Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import main.css-->
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <!--Title-->
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3>Registrar Usuario</h3>
+                <div class="row s12">
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn modal-trigger" href="#regispa">Paciente</a>
+                    <!-- Modal Structure -->
+                    <div id="regispa" class="modal">
+                        <div class="modal-content">
+                            <h3>Ingrese sus datos</h3>
+                            <form action="registerP" method="GET">
+                                <div class="row">
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="user" required="required" maxlength="20">
+                                        <label for="user">Usuario</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="pass" required="required" maxlength="20">
+                                        <label for="pass">Contraseña</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="cedula" required="required" maxlength="15">
+                                        <label for="cedula">Documento de Identidad</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="nombres" required="required" maxlength="20">
+                                        <label for="nombres">Nombre</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="fecha" required="required" maxlength="10">
+                                        <label for="fecha">Fecha de Nacimiento</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="direccion" required="required" maxlength="20">
+                                        <label for="direccion">Dirección</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="telefono" required="required" maxlength="20">
+                                        <label for="telefono">Teléfono</label>
+                                    </div>
+                                    <div class="col s12 l12">
+                                        <input type="submit" class="btn btn-success" value="Registrar" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row s12">
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn modal-trigger" href="#regisme">Médico</a>
+                    <!-- Modal Structure -->
+                    <div id="regisme" class="modal">
+                        <div class="modal-content">
+                            <h4>Ingresar</h4>
+                            <form action="registerM" method="GET">
+                                <div class="row">
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="user" required="required" maxlength="20">
+                                        <label for="user">Usuario</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="pass" required="required" maxlength="20">
+                                        <label for="pass">Contraseña</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="cedula" required="required" maxlength="15">
+                                        <label for="cedula">Documento de Identidad</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="nombres" required="required" maxlength="20">
+                                        <label for="nombres">Nombre</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="fecha" required="required" maxlength="10">
+                                        <label for="fecha">Fecha de Nacimiento</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="direccion" required="required" maxlength="20">
+                                        <label for="direccion">Dirección</label>
+                                    </div>
+                                    <div class="input-field col s12 l6">
+                                        <input type="text" class="campos" name="telefono" required="required" maxlength="20">
+                                        <label for="telefono">Teléfono</label>
+                                    </div>
+                                    <div class="col s12 l12">
+                                        <input type="submit" class="btn btn-success" value="Registrar" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
