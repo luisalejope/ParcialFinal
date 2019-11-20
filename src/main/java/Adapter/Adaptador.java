@@ -1,7 +1,6 @@
 
 package Adapter;
 
-private int holiwi;
 public class Adaptador extends Usuario {
     private Administrador Administrador;
    
