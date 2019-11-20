@@ -61,8 +61,13 @@ public class Medico extends HttpServlet {
             String Diagnostico = req.getParameter("diagnostico");
             String otros = req.getParameter("otros");
             Adapter.Medico medico =(Adapter.Medico) req.getAttribute("medico");
+             String me = req.getParameter("medico");
 
-            facade.agregarHistoria(paciente, Especialista, Antecedentes_Familiares, Diagnostico, otros, Fecha, medico);
+         
+                  
+           
+
+            facade.agregarHistoria(paciente, Especialista, Antecedentes_Familiares, Diagnostico, otros, Fecha, medico );
             ServletOutputStream out = resp.getOutputStream();
             out.write("Historial Agregado".getBytes());
             out.flush();
