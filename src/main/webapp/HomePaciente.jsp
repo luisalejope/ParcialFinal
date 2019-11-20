@@ -30,6 +30,7 @@
             <ul class="left hide-on-med-and-down">
                 <li><a href="paciente?paciente=${usuario.login}">Pedir Cita</a></li>
                 <li><a href="badges.html">Ver Historial Médico</a></li>
+                <li><a href="historialcitaspa.html">Historial Citas</a></li>
                 <li><a href="VerCitasPaciente.html">Ver Citas</a></li>
             </ul>
         </div>
@@ -38,11 +39,11 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a href="paciente?paciente=${usuario.login}">Pedir Cita</a></li>
         <li><a href="badges.html">Ver Historial Médico</a></li>
+        <li><a href="historialcitaspa.html">Historial Citas</a></li>
         <li><a href="VerCitasPaciente.html">Ver Citas</a></li>
     </ul>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
