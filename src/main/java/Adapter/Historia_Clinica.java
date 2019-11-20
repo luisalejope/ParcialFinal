@@ -17,7 +17,7 @@ public class Historia_Clinica {
     String Diagnostico;
     String otros;
     Date Fecha;
-    Medico medico;
+    Medico medico;  
 
     public Historia_Clinica() {
     }

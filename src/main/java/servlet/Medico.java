@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletOutputStream;
 
 @WebServlet(
         name = "Medico",
@@ -50,17 +51,25 @@ public class Medico extends HttpServlet {
             rd.forward(req, resp);
 
         } else if (url.equalsIgnoreCase("/historiaPaciente")) {
-            String paciente = req.getParameter("paciente");
+            
+            try {
+                Date Fecha=new SimpleDateFormat("dd/MM/yyyy").parse(req.getParameter("fecha"));String paciente = req.getParameter("paciente");
             String Especialista = req.getParameter("especialista");
-            String Antecedentes_Familiares = req.getParameter("antecedentes");
+            String Antecedentes_Familiares = req.getParameter("a_familiares");
             String Diagnostico = req.getParameter("diagnostico");
             String otros = req.getParameter("otros");
-            try {
-                Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(req.getParameter("fecha"));
+            Adapter.Medico medico =(Adapter.Medico) req.getAttribute("medico");
+
+            facade.agregarHistoria(paciente, Especialista, Antecedentes_Familiares, Diagnostico, otros, Fecha, medico);
+            ServletOutputStream out = resp.getOutputStream();
+            out.write("Cita agregada".getBytes());
+            out.flush();
+            out.close();
+                
             } catch (ParseException ex) {
                 Logger.getLogger(Medico.class.getName()).log(Level.SEVERE, null, ex);
             }
-            Medico medico =(Medico) req.getAttribute("medico");
+            
             
         }
     }
